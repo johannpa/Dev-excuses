@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import "./Loader.css";
-import data from "../data/data.json";
+
 
 const Loader = () => {
     const [loading, setLoading] = useState(false);
@@ -25,15 +25,11 @@ const Loader = () => {
             </div>
         ) : (
             <div className="main-content">
-                <h1>Le Loader</h1>
                 <div className="button">
-                    <button className="btn get-quote" onClick={() => setState(state+1)}>
+
+                    {/* <button className="btn get-quote" onClick={() => setState(state+1)}>
                         Generate Quote
-                    </button>
-                </div>
-                <div className="quote-section">
-                    <blockquote className='quote'>{}</blockquote> -{' '}
-                    <span className='author'>{}</span>
+                    </button> */}
                 </div>
             </div>
         )}

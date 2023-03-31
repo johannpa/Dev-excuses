@@ -1,6 +1,5 @@
 import React from 'react';
 import ButtonForExcuses from './ButtonForExcuses';
-import Loader from './Loader';
 
 
 function Excuses() {
@@ -8,7 +7,6 @@ function Excuses() {
     <div>
       <h1>Les excuses ici</h1>
         <ButtonForExcuses />
-        <Loader />
     </div>
   )
 }
