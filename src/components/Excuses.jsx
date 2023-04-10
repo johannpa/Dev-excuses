@@ -5,7 +5,7 @@ import ButtonForExcuses from './ButtonForExcuses';
 function Excuses() {
   return (
     <div>
-      <h1>Les excuses ici</h1>
+      <h1>Excuses de Dev</h1>
         <ButtonForExcuses />
     </div>
   )
