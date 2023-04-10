@@ -21,6 +21,7 @@ const ButtonForExcuses = () => {
         .then((items) => {
           setLoading(false);
           setItems(items);
+          console.log(items);
         });
     }, num);
   };

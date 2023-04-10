@@ -25,11 +25,9 @@ const Loader = () => {
             </div>
         ) : (
             <div className="main-content">
-                <div className="button">
-
-                    {/* <button className="btn get-quote" onClick={() => setState(state+1)}>
-                        Generate Quote
-                    </button> */}
+                <div>
+                    
+                    
                 </div>
             </div>
         )}

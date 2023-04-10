@@ -9,12 +9,12 @@ const Lost = () => {
     setTimeout(() => {
       navigate('/', { replace: true});
     }, 5000);
-  }, []);
+  }, [navigate]);
 
   return (
     <div>
       <h1>I'am lost</h1>
-      <iframe src="https://giphy.com/embed/QBGqqaOt8qKCHJdVw3" width="480" height="270" className="giphy-embed" allowFullScreen></iframe>
+      <iframe src="https://giphy.com/embed/QBGqqaOt8qKCHJdVw3" title='lost' width="480" height="270"></iframe>
     </div>
   )
 }
