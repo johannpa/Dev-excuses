@@ -21,7 +21,6 @@ const ButtonForExcuses = () => {
         .then((items) => {
           setLoading(false);
           setItems(items);
-          console.log(items);
         });
     }, num);
   };
@@ -30,9 +29,21 @@ const ButtonForExcuses = () => {
     getData();
   }, [message]);
 
-  const handleExcuse = () => {
+  
+
+  const handleMessageByHttpCode = (httpCode) => {
+    items.filter((item) => {
+      if(item.http_code === httpCode) {
+        return item.message;
+      } else {
+        return "Ce http_code n'existe pas";
+      }
+    });
+  }
+
+  const handleExcuseMessage = () => {
     let randomValue = items[Math.floor(Math.random() * items.length)];
-    setMessage(randomValue["message"].trim());
+    setMessage(randomValue["message"].trim()); // setMessage(randomValue["http_code"]); it works to get the value of the key http_code
   };
 
   return (
@@ -48,12 +59,12 @@ const ButtonForExcuses = () => {
           <button
             onClick={() => {
               setNum(randomNumber(0, 5));
-              handleExcuse();
+              handleExcuseMessage();
             }}
           >
             Message
           </button>
-          {console.log(num / 1000 + " secondes d'attente")}
+          {/* {console.log(num / 1000 + " secondes d'attente")} */}
         </div>
       )}
     </div>

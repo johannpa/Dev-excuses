@@ -6,7 +6,7 @@ function Http_code() {
   const { http_code } = useParams();
   
   const excuse = Data.find(object => {
-    return object.http_code == http_code;
+    return object.http_code === http_code;
   });
 
 
